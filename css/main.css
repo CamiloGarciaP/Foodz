@@ -30,7 +30,7 @@
 /* Main */
 /* Footer */
 
-/* Media Queries */
+/* Media Queries (Siempre tienen que ir de último)*/
 
 @media ( min-width: 568px) {
     .container {
