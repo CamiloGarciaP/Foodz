@@ -1,3 +1,17 @@
+/* Variables globales  (funciona para gestionar de una manera más fácil y organizada ciertas propiedades en el código Ej: Color, tamaño de letras, etc,etc */
+:root{ 
+    /** Convierte 1rem en base 10px */
+    --over-font-size: 62.5%; /** Este porcentaje hace que el " em / rem " sea de base 10px */
+    
+    /* Colores Base */
+    --Islamic-Green: 04B90B;
+    --Slate-Gray: 777E90;
+} 
+
+html {
+    font-size: var(--over-font-size); 
+}
+
 html, 
 body {
     height: 100%;
@@ -10,7 +24,7 @@ body {
 }
 
 h1 span {
-    color: #04B90B;
+    color: var(--Islamic-Green);  /** "var" refiere a las variables globales para identificar los colores tratando de que sean estandarizados*/
 }
 
 ./* Header */
@@ -35,7 +49,6 @@ h1 span {
     padding: 0;
 }
 
-
 .menu-main {
     display: none;
 }
@@ -48,7 +61,7 @@ h1 span {
 }
 
 .menu__link {
-    color: #777E90;
+    color: var(--Slate-Gray);
     text-decoration: none;
 }
 
@@ -58,10 +71,9 @@ h1 span {
 }
 
 .btn--light-green {
-    background-color: #04B90B;
+    background-color: var(--Islamic-Green);
     color: #FFFFFF;
     text-transform: uppercase;
-
 }
 
 /* Main */
