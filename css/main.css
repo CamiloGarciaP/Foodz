@@ -2,10 +2,15 @@
 :root{ 
     /** Convierte 1rem en base 10px */
     --over-font-size: 62.5%; /** Este porcentaje hace que el " em / rem " sea de base 10px */
-    
+
     /* Colores Base */
-    --Islamic-Green: 04B90B;
-    --Slate-Gray: 777E90;
+    --Islamic-Green: #04B90B; /** Color principal "botón Order Now" Pag.1 */
+    --Slate-Gray: #777E90; /** Color de los btn en el Header & h2 Pag.1 */
+    --Cultured: #F4F5F6; /** Color del recuadro "years of service" Pag.1 */
+    --Charleston-Green: #23262F; /** Color de letra h1 Pag.1*/
+    --Chinese-White: #DDF3D8; /** Color del circulo de fondo en la imagen Pag.1 */
+    --Lotion: #FCFCFD; /** Color blanco del fondo de la pagina web Pag.1*/
+    --White: #FFFFFF; /** Color de fondo en las imagenes de comida Pag.2 & la descripción de la Pag.3 */
 } 
 
 html {
@@ -24,7 +29,7 @@ body {
 }
 
 h1 span {
-    color: var(--Islamic-Green);  /** "var" refiere a las variables globales para identificar los colores tratando de que sean estandarizados*/
+    color: var(--Islamic-Green);   /** "var" refiere a las variables globales para identificar los colores tratando de que sean estandarizados*/
 }
 
 ./* Header */
