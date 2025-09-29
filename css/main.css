@@ -4,12 +4,12 @@
     --over-font-size: 62.5%; /** Este porcentaje hace que el " em / rem " sea de base 10px */
 
     /* Colores Base */
-    --Islamic-Green: #04B90B; /** Color principal "botón Order Now" Pag.1 */
-    --Slate-Gray: #777E90; /** Color de los btn en el Header & h2 Pag.1 */
-    --Cultured: #F4F5F6; /** Color del recuadro "years of service" Pag.1 */
     --Charleston-Green: #23262F; /** Color de letra h1 Pag.1*/
     --Chinese-White: #DDF3D8; /** Color del circulo de fondo en la imagen Pag.1 */
+    --Cultured: #F4F5F6; /** Color del recuadro "years of service" Pag.1 */
+    --Islamic-Green: #04B90B; /** Color principal "botón Order Now" Pag.1 */
     --Lotion: #FCFCFD; /** Color blanco del fondo de la pagina web Pag.1*/
+    --Slate-Gray: #777E90; /** Color de los btn en el Header & h2 Pag.1 */
     --White: #FFFFFF; /** Color de fondo en las imagenes de comida Pag.2 & la descripción de la Pag.3 */
 } 
 
@@ -26,6 +26,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    font-size: 1.6rem;
 }
 
 h1 span {
@@ -43,15 +44,15 @@ h1 span {
     box-sizing: border-box;    
     margin: 0 auto;          /**Centra el elemento*/
     max-width: 96vw;         /**Ancho Máximo*/
-    padding: 0 8px;          /**Hace que los bordes queden internos*/
+    padding: 0 .8rem;          /**Hace que los bordes queden internos*/
 }
 
-.container-fluid{
+.container-fluid {
     border: 1px solid orangered;
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 100vw;
-    padding: 0;
+    padding: 0 ;
 }
 
 .menu-main {
@@ -61,7 +62,7 @@ h1 span {
 .nav-navbar {
     align-items: center;
     display: flex;
-    height: 44px;
+    height: 4.4rem;
     justify-content: space-between;
 }
 
@@ -87,12 +88,12 @@ main {
 }
 /* Footer */
 
-/* Media Queries (Siempre tienen que ir de último)*/
+/* Media Queries(Break-Point) (Siempre tienen que ir de último)*/
 
 @media ( min-width: 568px) {
     .container {
-        max-width: 540px;
-        padding: 0 16px;   /**Cada uno de estos maneja la distancia entre el contenido y el borde del contenedor. E incrementa en 8px en cada media query*/
+        max-width: 54rem;
+        padding: 0 1.6rem;   /**Cada uno de estos maneja la distancia entre el contenido y el borde del contenedor. E incrementa en 8px en cada media query*/
     }
     .menu-main {
     display: flex;
@@ -107,42 +108,42 @@ main {
 }
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
-        padding: 0 24px;
+        max-width: 72rem;
+        padding: 0 2.4rem;
     }
 }
 
 @media (min-width: 1024px){
     .container{
-        max-width: 992px;
-        padding: 0 32px;
+        max-width: 99.2rem;
+        padding: 0 3.2rem;
     }
 }
 
 @media ( min-width:1200px ){
     .container{
-        max-width: 1140px;
-        padding:0 40px;
+        max-width: 114rem;
+        padding:0 4rem;
     }
 }
 
 @media ( min-width:1400px ){
     .container{
-        max-width: 1320px;
-        padding: 0 48px;
+        max-width: 132rem;
+        padding: 0 4.8rem;
     }
 }
 
 @media ( min-width:1600px ){
     .container{
-        max-width: 1440px;
-        padding: 0 56px;
+        max-width: 144rem;
+        padding: 0 5.6rem;
     }
 }
 
 @media ( min-width:1920px ){
     .container{
-        max-width: 1600px;
-        padding-left: 0 64px;
+        max-width: 160rem;
+        padding-left: 0 6.4rem;
     }
 }
