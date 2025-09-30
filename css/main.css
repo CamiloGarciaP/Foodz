@@ -1,36 +1,41 @@
 /* Variables globales  (funciona para gestionar de una manera más fácil y organizada ciertas propiedades en el código Ej: Color, tamaño de letras, etc,etc */
-:root{ 
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+/** Tipografía (fuente) usada para la página Web, siempre se debe poner en la parte superior del código (por encima del root) por si se deben poner más. */
+
+:root {
     /** Convierte 1rem en base 10px */
-    --over-font-size: 62.5%; /** Este porcentaje hace que el " em / rem " sea de base 10px */
+    --over-font-size: 62.5%;
+    /** Este porcentaje hace que el " em / rem " sea de base 10px */
 
     /* Colores Base */
-    --chinese-black:#141416;
-    --slate-grey: #777e90;
-    --cadet-blue:#b1b5c3;
-    --bright-gray:#e6e8ec;
-    --cultured:#f5f6fa;
-    --lotion: #fcfcfd;
-    --islamic-green:-#04b90b;
-    --aero-blue:#d3f9d5;
-    --light-coral:#ea8484;
-    --lavender-blush:#fcf1f1;
-    --green-blue:#106aab;
-    --alice-blue:#f1f7fc;
-    --dark-pink:#f25178;
-    --misty-rose:#fce5e9;
-    --blue-violet:#8d31e9;
-    --magnolia:#f6eefd;
-    --gamboge:#da9f0a;
-    --cornsilk:#fcf6d8;
-    --light-sea-green:#26aca0;
-    --azure:#edfcfb;
-} 
-
-html {
-    font-size: var(--over-font-size); 
+    --Chinese-Black: #141416;
+    --Slate-Grey: #777e90;
+    --Cadet-Blue: #b1b5c3;
+    --Bright-Gray: #e6e8ec;
+    --Cultured: #f5f6fa;
+    --Lotion: #fcfcfd;
+    --Islamic-Green: #04b90b;
+    --Aero-Blue: #d3f9d5;
+    --Light-Coral: #ea8484;
+    --Lavender-Blush: #fcf1f1;
+    --Green-Blue: #106aab;
+    --Alice-Blue: #f1f7fc;
+    --Dark-Pink: #f25178;
+    --Misty-Rose: #fce5e9;
+    --Blue-Violet: #8d31e9;
+    --Magnolia: #f6eefd;
+    --Gamboge: #da9f0a;
+    --Cornsilk: #fcf6d8;
+    --Light-Sea-Green: #26aca0;
+    --Azure: #edfcfb;
+    --Charleston-Green: #23262F;
 }
 
-html, 
+html {
+    font-size: var(--over-font-size);
+}
+
+html,
 body {
     height: 100%;
     margin: 0;
@@ -40,13 +45,23 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1.6rem;
+    font-family: "Alice", serif;
 }
 
 h1 span {
-    color: var(--Islamic-Green);   /** "var" refiere a las variables globales para identificar los colores tratando de que sean estandarizados*/
+    color: var(--Islamic-Green);
+    /** "var" refiere a las variables globales para identificar los colores tratando de que sean estandarizados*/
 }
 
-./* Header */
+h1,
+h2 {
+    color: var(--Charleston-Green);
+    font-size: 3.2rem;
+}
+
+
+.
+/* Header */
 
 .header {
     border: 1px dotted red;
@@ -54,10 +69,13 @@ h1 span {
 
 .container {
     border: 1px dotted blue;
-    box-sizing: border-box;    
-    margin: 0 auto;          /**Centra el elemento*/
-    max-width: 96vw;         /**Ancho Máximo*/
-    padding: 0 .8rem;          /**Hace que los bordes queden internos*/
+    box-sizing: border-box;
+    margin: 0 auto;
+    /**Centra el elemento*/
+    max-width: 96vw;
+    /**Ancho Máximo*/
+    padding: 0 .8rem;
+    /**Hace que los bordes queden internos*/
 }
 
 .container-fluid {
@@ -65,7 +83,7 @@ h1 span {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 100vw;
-    padding: 0 ;
+    padding: 0;
 }
 
 .menu-main {
@@ -84,8 +102,12 @@ h1 span {
     text-decoration: none;
 }
 
+.active {
+    color: var(--Islamic-Green)
+}
+
 .btn {
-    padding: .5rem;
+    padding: 1rem;
     border-radius: .3rem;
 }
 
@@ -99,63 +121,120 @@ h1 span {
 main {
     flex-grow: 1;
 }
+
 /* Footer */
+.widget {
+    margin: 4rem 0;
+}
+
+.widget-left {
+    text-align: center;
+}
+
+
+details {
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 0.5em;
+}
+
+
+
 
 /* Media Queries(Break-Point) (Siempre tienen que ir de último)*/
 
-@media ( width > 568px) {      /** Ahora se cambia la escritura de " min-width: #px " a " width > #px " para Mobile First*/ /** Y para Desktop First se escribe " width < #px */
+@media (width > 568px) {
+
+    /** Ahora se cambia la escritura de " min-width: #px " a " width > #px " para Mobile First*/
+    /** Y para Desktop First se escribe " width < #px */
     .container {
         max-width: 54rem;
-        padding: 0 1.6rem;   /**Cada uno de estos maneja la distancia entre el contenido y el borde del contenedor. E incrementa en 8px en cada media query*/
+        padding: 0 1.6rem;
+        /**Cada uno de estos maneja la distancia entre el contenido y el borde del contenedor. E incrementa en 8px en cada media query*/
     }
+
     .menu-main {
-    display: flex;
-    gap: .5rem;   /**em ("Tipo de medida" Relacionado solo con el elemento padre) / rem ("Tipo de medida" Relacionado solo con el elemento root (raiz HTML)  */
-    list-style: none;
-    margin: 0;
-    padding: 0;
+        display: flex;
+        gap: .5rem;
+        /**em ("Tipo de medida" Relacionado solo con el elemento padre) / rem ("Tipo de medida" Relacionado solo con el elemento root (raiz HTML)  */
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
+
     .hamburger-menu {
-    display: none;
+        display: none;
+    }
 }
-}
-@media ( width > 768px) {
+
+@media (width > 768px) {
     .container {
         max-width: 72rem;
         padding: 0 2.4rem;
     }
+
+    .footer-container {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .widget-left {
+        flex-basis: 40%;
+    }
+
+    .widget-right {
+        /* flex-basis: auto; */
+        /* flex-grow: 1; */
+        flex: 1 0 auto;
+        /**Esta es la manera abrebiada de hecer el flex en una linea de código  "<grow> <shrink> <auto basis>" */
+    }
 }
 
-@media ( width > 1024px){
-    .container{
+@media (width > 1024px) {
+    .container {
         max-width: 99.2rem;
         padding: 0 3.2rem;
     }
 }
 
-@media ( width > 1200px ){
-    .container{
+@media (width > 1200px) {
+    .container {
         max-width: 114rem;
-        padding:0 4rem;
+        padding: 0 4rem;
     }
 }
 
-@media ( width > 1400px ){
-    .container{
+@media (width > 1400px) {
+    .container {
         max-width: 132rem;
         padding: 0 4.8rem;
     }
 }
 
-@media ( width > 1600px ){
-    .container{
+@media (width > 1600px) {
+    .container {
         max-width: 144rem;
         padding: 0 5.6rem;
     }
 }
 
-@media ( width > 1920px ){
-    .container{
+@media (width > 1920px) {
+    .container {
         max-width: 160rem;
         padding-left: 0 6.4rem;
     }
