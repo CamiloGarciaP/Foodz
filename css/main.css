@@ -60,6 +60,11 @@ h2 {
     font-size: 3.2rem;
 }
 
+h2{
+
+}
+
+
 h1,
 h2,
 h3,
@@ -178,6 +183,19 @@ h2 span {
     width: 100%;
 }
 
+/* Main chef */
+.chef-1 {
+    flex-basis: 50%;
+}
+
+.chef-2 {
+    flex-basis: 50%;
+}
+
+h2.chef-michelin {
+    text-align: center;
+}
+
 
 /* Footer */
 .menu-footer {
@@ -226,8 +244,19 @@ details[open] summary {
         max-width: 54rem;
         padding: 0 1.6rem;  /**Cada uno de estos maneja la distancia entre el contenido y el borde del contenedor. E incrementa en 8px en cada media query*/
     }
-
 }
+.image\.chef {
+    display: none;
+}
+
+h3.chef-encabezado {
+    color: var(--Islamic-Green);
+}
+
+a.link-chef {
+    color: var(--Islamic-Green);
+}
+
 
 @media (width > 768px) {
 
@@ -280,6 +309,20 @@ details[open] summary {
         max-width: 100vw;
         padding: 0;
     }
+    
+    /* Información de Chef */
+
+    .chefs-content {
+        display: flex;
+}
+
+.image\.chef {
+    display: flex;
+}
+
+
+
+
 
     .footer-container {
         display: flex;
